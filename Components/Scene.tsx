@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { Environment, Html } from "@react-three/drei";
 import Loader from "./Loader";
 import Wizard from "./Wizard";
 import { Model as Particles } from "./Particles";
@@ -14,8 +14,10 @@ export default function Scene() {
           <Wizard />
           <Particles />
         </Suspense>
+        <Html fullscreen>
+          <Loader />
+        </Html>
       </Canvas>
-      <Loader />
     </div>
   );
 }

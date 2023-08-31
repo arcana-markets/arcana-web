@@ -10,7 +10,7 @@ export default function Loader() {
 
       // Add animations to the timeline
       tl.to(loader.current, {
-        delay: 7.5,
+        delay: 6.5,
         opacity: 0,
         duration: 2,
         onComplete: () => {
@@ -24,7 +24,7 @@ export default function Loader() {
       ref={loader}
       className='h-[100vh] w-full absolute top-20 left-0  bg-cover hero-loader'
     >
-      <p>Arcana</p>
+      <p>Archana</p>
       <p>Markets</p>
     </div>
   );
