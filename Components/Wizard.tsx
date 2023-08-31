@@ -8,9 +8,6 @@ const Model = () => {
   const modelRef = useRef<THREE.Object3D>();
   const mixer = useRef<THREE.AnimationMixer>();
 
-  // Check if the model has animations
-  const hasAnimations = gltf.animations && gltf.animations.length > 0;
-
   useFrame((state, delta) => {
     if (mixer) {
       mixer?.current?.update(0.015);
