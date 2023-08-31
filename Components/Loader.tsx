@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
 export default function Loader() {
@@ -10,9 +10,9 @@ export default function Loader() {
 
       // Add animations to the timeline
       tl.to(loader.current, {
-        delay: 3.5,
+        delay: 7.5,
         opacity: 0,
-        duration: 1,
+        duration: 2,
         onComplete: () => {
           if (loader.current) loader.current.style.display = "none";
         },
@@ -24,7 +24,7 @@ export default function Loader() {
       ref={loader}
       className='h-[100vh] w-full absolute top-20 left-0  bg-cover hero-loader'
     >
-      <p>Archana</p>
+      <p>Arcana</p>
       <p>Markets</p>
     </div>
   );

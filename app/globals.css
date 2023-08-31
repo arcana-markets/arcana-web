@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,27 +39,23 @@ body {
   font-weight: bold !important;
   position: static;
   font-size: 20vw;
-  line-height: 30vh;
+  line-height: 40vh;
   letter-spacing: -22px;
   animation-fill-mode: forwards;
-  font-family: Montserrat;
+  font-family: 'Inter', sans-serif !important;
 
 }
 
 .hero-loader p:nth-of-type(1) {
-  animation: p-loader 900ms linear both;
+  animation: p-loader 3000ms linear both;
 
 }
 
 .hero-loader p:nth-of-type(2) {
-  animation: p-loader 1800ms linear both;
+  animation: p-loader 6000ms linear both;
 
 }
 
-.hero-loader p:nth-of-type(3) {
-  animation: p-loader 2700ms linear both;
-
-}
 
 @keyframes p-loader {
   0% {
