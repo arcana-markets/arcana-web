@@ -10,7 +10,7 @@ export default function Loader({ isLoaded }: { isLoaded: boolean }) {
 
       // Add animations to the timeline
       tl.to(loader.current, {
-        opacity: 0,
+        opacity: 1,
         duration: 1,
         onComplete: () => {
           if (loader.current) loader.current.style.display = "none";
@@ -23,7 +23,7 @@ export default function Loader({ isLoaded }: { isLoaded: boolean }) {
       ref={loader}
       className='h-[100vh] w-full absolute top-20 left-0  bg-cover hero-loader'
     >
-      <p>Archana</p>
+      <p>Arcana</p>
       <p>Markets</p>
     </div>
   );
