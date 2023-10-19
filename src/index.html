@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js - Template - Simple</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+    <style>
+        /* Stylish Button Styles */
+        .button {
+            position: fixed;
+            bottom: 60px; /* Adjusted higher up */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #18254e;
+            color: white;
+            padding: 20px 40px; /* Increased size */
+            font-size: 24px; /* Adjusted the font size to make the text larger */
+            border-radius: 10px; /* Added rounding */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Added a dark glow effect */
+            cursor: pointer;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        /* Button Animation */
+        .button.fade-in {
+            opacity: 1;
+        }
+
+        /* Hover Styles */
+        .button:hover {
+            box-shadow: 0 0 30px rgba(136, 162, 218, 0.7); /* Change glow intensity on hover */
+            -webkit-box-shadow: 0 0 30px rgba(136, 162, 218, 0.7); /* WebKit prefix for box-shadow property */
+        }
+
+    </style>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="container">
+        <div class="logo"></div>
+        <h1>The Next Dimension of DeFi</h1>
+        <p>Permissionless and powerful, Arcana's robust API and beautiful no-code platform gives traders and developers the DeFi superpowers they need.</p>
+    </div>
+
+    <!-- Stylish Button -->
+    <button id="startDemoButton" class="button fade-in">Start Hyperdrive Demo</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Select the button element by its ID
+        const button = document.getElementById('startDemoButton');
+    
+        // Function to add the fade-in class to the button
+        function fadeInButton() {
+            button.classList.add('fade-in');
+        }
+    
+        // Wait for the page to fully load before fading in the button
+        window.addEventListener('load', () => {
+            // Delay the fade-in effect for a few seconds (adjust as needed)
+            setTimeout(fadeInButton, 2000); // 2000 milliseconds (2 seconds) delay
+        });
+    </script>
+</body>
+</html>
