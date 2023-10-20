@@ -48,15 +48,6 @@
             left: 60px; /* Position from the left */
             transform: none; /* Remove the centering transform */
         }
-                /* Media Query for Mobile View */
-                @media (max-width: 767px) {
-            .button {
-                bottom: 20px; /* Adjust position for mobile */
-            }
-            .small-button {
-                left: 20px; /* Adjust position for mobile */
-            }
-        }
     </style>
 </head>
 <body>
@@ -94,12 +85,6 @@
             // Delay the fade-in effect for a few seconds (adjust as needed)
             setTimeout(fadeInButton, 2000); // 2000 milliseconds (2 seconds) delay
         });
-                // Additional script to handle the small button fade-in
-                const docsButton = document.getElementById('docsButton');
-        function fadeInDocsButton() {
-            docsButton.classList.add('fade-in');
-        }
-        setTimeout(fadeInDocsButton, 3000);  // 3000 milliseconds (3 seconds) delay
     </script>
 </body>
 </html>

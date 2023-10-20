@@ -43,9 +43,11 @@
      * Camera
      */
     // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000);
-camera.position.set(0, 0, 5.5);
-scene.add(camera);
+    const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1,1000)
+    camera.position.x = 0
+    camera.position.y = 0
+    camera.position.z = 5.5
+    scene.add(camera)
 
     // Controls
     const controls = new OrbitControls(camera, canvas)
@@ -54,6 +56,8 @@ scene.add(camera);
     // controls.enableZoom = false
     controls.enabled = false
     // const gui = new dat.GUI();
+    
+
 
 
 /**
@@ -308,29 +312,23 @@ new RGBELoader()
         const elapsedTime = clock.getElapsedTime();
         const deltaTime = elapsedTime - lastElapsedTime;
         lastElapsedTime = elapsedTime;
-    
-        particleMaterial.uniforms.uTime.value = elapsedTime;
+
+        particleMaterial.uniforms.uTime.value = elapsedTime;  // This line updates the uTime uniform each frame
+
     
         if (model && model.mixer && loaded) {
             model.mixer.update(deltaTime);
         }
     
         if (model) {
-            // Adjust position and scale based on window dimensions
-            if (window.innerWidth <= 768) {  // Mobile
-                model.position.set(0, 0, 4.4);
-                model.scale.set(0.005, 0.005, 0.005);  // Adjust scale for mobile
-            } else {  // Desktop
-                model.position.set(0.8, 0, 4.4);
-                model.scale.set(0.01, 0.01, 0.01);  // Restore original scale for desktop
-            }
-    
+            // Lerp and clamp rotation for smoother transitions and limited rotation
             const targetRotationY = THREE.MathUtils.clamp(mouse.x * Math.PI / 10, -Math.PI / 4, Math.PI / 4);
             const targetRotationX = THREE.MathUtils.clamp(-mouse.y * Math.PI / 10, -Math.PI / 4, Math.PI / 4);
     
             model.rotation.y = THREE.MathUtils.lerp(model.rotation.y, targetRotationY, 0.05);
             model.rotation.x = THREE.MathUtils.lerp(model.rotation.x, targetRotationX, 0.05);
-        }    
+        }
+    
         if (loaded) {
             for (let i = 0; i < particleCount; i++) {
                 const sphere = particles.children[i];
@@ -358,11 +356,11 @@ new RGBELoader()
         particles2.rotation.y = -elapsedTime * rotationSpeed / 3;
         particles2.rotation.x = -elapsedTime * rotationSpeed / 3;
     
-    // Update controls
-    controls.update();
-
-    // Render
-    renderer.render(scene, camera);
-};
+        // Update controls
+        controls.update();
     
-    tick();    
+        // Render
+        renderer.render(scene, camera);
+    };
+    
+    tick();
