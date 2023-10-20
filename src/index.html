@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js - Template - Simple</title>
-
+    <title>Arcana Markets Web</title>
+                <!-- Example snippet from RealFaviconGenerator -->
+                <link rel="apple-touch-icon" sizes="180x180" href="/dist/assets/favicons/apple-touch-icon.png">
+                <link rel="icon" type="image/png" sizes="32x32" href="/dist/assets/favicons/favicon-32x32.png">
+                <link rel="icon" type="image/png" sizes="16x16" href="/dist/assets/favicons/favicon-16x16.png">
+                <link rel="shortcut icon" type="image/x-icon" href="/dist/assets/favicons/favicon.ico">
+                <link rel="manifest" href="/dist/assets/favicons/manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
     <style>
         /* Stylish Button Styles */
@@ -35,6 +40,14 @@
             -webkit-box-shadow: 0 0 30px rgba(136, 162, 218, 0.7); /* WebKit prefix for box-shadow property */
         }
 
+        /* Smaller Button Styles */
+        .small-button {
+            font-size: 14px; /* Smaller font size */
+            padding: 10px 20px; /* Smaller padding */
+            bottom: 60px; /* Lower position */
+            left: 60px; /* Position from the left */
+            transform: none; /* Remove the centering transform */
+        }
     </style>
 </head>
 <body>
@@ -44,12 +57,18 @@
     </div>
     <div class="container">
         <div class="logo"></div>
-        <h1>The Next Dimension of DeFi</h1>
-        <p>Permissionless and powerful, Arcana's robust API and beautiful no-code platform gives traders and developers the DeFi superpowers they need.</p>
+        <h1>The Solana DeFi Spellbook </h1>
+        <p>arcanaJ provides a local device interface for secure, open-source bot trading, allowing for custom strategies, accessible via app or Docker.</p>
     </div>
 
     <!-- Stylish Button -->
-    <button id="startDemoButton" class="button fade-in">Start Hyperdrive Demo</button>
+    <a href="https://github.com/makolabs-xyz/arcana" target="_blank">
+        <button id="startDemoButton" class="button fade-in">Start Hyperdrive Demo</button>
+      </a>
+      
+      <a href="https://docs.arcana.markets" target="_blank">
+        <button id="docsButton" class="button small-button fade-in">Docs</button>
+    </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>

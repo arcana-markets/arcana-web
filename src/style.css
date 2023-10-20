@@ -16,7 +16,7 @@ body
 {
     /* background: linear-gradient(to right, #104EFF, #00E0FF); */
     background-color: #101011;
-    background: linear-gradient(to right, #0c1e3f, #040f1b);
+    background: linear-gradient(to right, #182f5a, #051a30);
     position: fixed;
     top: 0;
     left: 0;
@@ -88,7 +88,7 @@ width: 400px;
     color: #b1c1f0;
     font-weight: bold;
     margin-bottom: 2rem; 
-    width: 400px;
+    width: 500px;
 }
 .logo{
     margin-top: 2%;
