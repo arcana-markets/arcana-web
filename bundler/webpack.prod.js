@@ -10,5 +10,10 @@ module.exports = merge(
         [
             new CleanWebpackPlugin()
         ]
-    }
+    },
+    output, {
+        path: path.resolve(__dirname, '../dist'), // Adjust this line to point to 'dist'
+        filename: '[name].[contenthash].js',
+        publicPath: '/',
+      },
 )
