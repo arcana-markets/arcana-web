@@ -1,19 +1,19 @@
-const { merge } = require('webpack-merge')
-const commonConfiguration = require('./webpack.common.js')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const path = require('path');
+const { merge } = require('webpack-merge');
+const commonConfiguration = require('./webpack.common.js');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = merge(
-    commonConfiguration,
-    {
-        mode: 'production',
-        plugins:
-        [
-            new CleanWebpackPlugin()
-        ]
+// Production specific configurations
+const productionConfiguration = {
+    mode: 'production',
+    output: {
+        path: path.resolve(__dirname, '../dist'), // Output directory set to 'dist'
+        filename: '[name].[contenthash].js', // Naming convention for output files
+        publicPath: '/'
     },
-    output, {
-        path: path.resolve(__dirname, '../dist'), // Adjust this line to point to 'dist'
-        filename: '[name].[contenthash].js',
-        publicPath: '/',
-      },
-)
+    plugins: [
+        new CleanWebpackPlugin() // Plugin to clean the 'dist' folder before build
+    ]
+};
+
+module.exports = merge(commonConfiguration, productionConfiguration);
