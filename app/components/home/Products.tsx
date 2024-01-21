@@ -3,6 +3,9 @@ import Wrapper from '../shared/Wrapper';
 import Image from 'next/image';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import Banner from './Banner';
+import Link from 'next/link';
+
+
 export default function Products() {
   return (
     <Wrapper style='relative'>
@@ -40,12 +43,15 @@ export default function Products() {
                 mauris tempus feugiat platea et porttitor. In ultrices sem nulla
                 massa. Mauris aliquet dis sit pulvinar proin facilisi.
               </p>
-              <button className='flex hover:opacity-80 z-20 active:translate-y-[2px] items-center gap-[1rem] mt-[1rem]'>
-                <p className='text-[16px] font-[500] text-[#5099CC]'>
-                  Explore Vaults
-                </p>
-                <FaArrowRightLong className='text-[#5099CC]' />
-              </button>
+              <button 
+              className='flex items-center gap-[1rem] mt-[1rem] opacity-50 cursor-not-allowed'
+              disabled // This attribute disables the button
+            >
+              <p className='text-[16px] font-[500] text-[#5099CC]'>
+                Explore Vaults
+              </p>
+              <FaArrowRightLong className='text-[#5099CC]' />
+            </button>
             </div>
             {/* image ---------->  */}
             <div className='absolute lg:block hidden h-full right-0'>
@@ -81,7 +87,12 @@ export default function Products() {
                 </p>
                 <button className='flex hover:opacity-80 active:translate-y-[2px] z-10 items-center gap-[1rem] mt-[1rem]'>
                   <p className='text-[16px] font-[500] text-white'>
+                  <a 
+                  href="https://app.arcana.markets/data" 
+                  rel="noopener noreferrer"
+                >
                     See Markets
+                    </a>
                   </p>
                   <FaArrowRightLong className='text-white' />
                 </button>
@@ -98,7 +109,13 @@ export default function Products() {
                   nulla massa. Mauris aliquet dis sit pulvinar proin.
                 </p>
                 <button className='mt-[1rem] hover:opacity-80 active:translate-y-[2px] w-fit py-[10px] px-[14px] rounded-[12px] bg-[#5099CC14] text-[#5099CC]'>
+                <a 
+                  href="https://github.com/arcana-markets" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   Start your own
+                  </a>
                 </button>
               </div>
               <div className='hidden lg:flex'>
