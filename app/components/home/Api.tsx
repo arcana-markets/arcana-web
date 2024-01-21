@@ -46,7 +46,7 @@ const Api: React.FC<ApiProps> = () => {
         </div>
         <div className='bg-[#5099CC] md:w-[40%] rounded-t-none rounded-b-[32px] md:rounded-r-[32px] flex flex-col justify-center items-center py-[2rem] gap-[2rem] rounded-l-[32px] md:rounded-l-none'>
           <Image src='/images/book.png' width={100} height={130} alt='' />
-          <button className='hover:opacity-80 active:translate-y-[2px] flex items-center gap-[1rem] mt-[1rem] bg-[#012A36] w-fit py-[14px] px-[32px] rounded-[12px]'>
+          <button className='hover:opacity-80 active:translate-y-[2px] flex items-center gap-[1rem] mt-[1rem] bg-[#012A36] w-fit py-[14px] px-[32px] rounded-[12px] opacity-50 cursor-not-allowed' disabled>
             <p className='text-[16px] font-[500] text-white'>
               Explore API Docs
             </p>
