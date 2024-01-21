@@ -61,12 +61,24 @@ export default function Hero() {
             Grow, manage, and sustain your crypto assets using our tools.
           </p>
           <div className='mt-[1rem] flex items-center gap-[1rem]'>
-            <button className='w-fit hover:opacity-80 active:translate-y-[2px] py-[10px] px-[16px] rounded-[12px] text-[16px] font-[500] bg-[#5099CC] text-white'>
-              Launch App
-            </button>
+          <a 
+              href="https://app.arcana.markets" 
+              rel="noopener noreferrer"
+              className='w-fit hover:opacity-80 active:translate-y-[2px] py-[10px] px-[16px] rounded-[12px] text-[16px] font-[500] bg-[#5099CC] text-white'
+            >
+              <button>
+                Launch App
+              </button>
+            </a>
+            <a 
+              href="https://github.com/arcana-markets" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
             <button className='w-fit hover:opacity-80 active:translate-y-[2px] py-[10px] px-[16px] rounded-[12px] text-[16px] font-[500] bg-[#012A36] text-white'>
               Read Docs
             </button>
+            </a>
           </div>
         </div>
         <div className='absolute top-0 right-0 z-10 hidden lg:block'>

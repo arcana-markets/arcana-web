@@ -12,7 +12,12 @@ export default function Footer() {
           <div className='flex flex-col gap-[1.5rem]'>
             <Image src='/images/logo.svg' width={140} height={35} alt='logo' />
             <div className='flex items-center gap-[2rem] ml-[10px]'>
-              <FaTwitter className='text-white w-[20px] h-[20px]' />
+            <Link href="https://x.com/arcanamarkets" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 >
+                  <FaTwitter className='text-white w-[20px] h-[20px]' />
+              </Link>
               <FaFacebookF className='text-white w-[20px] h-[20px]' />
               <FaLinkedin className='text-white w-[20px] h-[20px]' />
             </div>
@@ -25,7 +30,7 @@ export default function Footer() {
                     {item.category}
                   </h3>
                   <div className='flex flex-col gap-[8px]'>
-                    {item.list.map((ls, index) => {
+                    {item.list?.map((ls, index) => {
                       return (
                         <Link
                           key={index}
@@ -54,16 +59,18 @@ export default function Footer() {
 }
 
 const footer = [
-  {
+  {/*{
     category: 'Company',
     list: ['About us', 'Blog', 'Media Kit', 'Careers'],
-  },
+  },*/},
+
   {
     category: 'Products',
-    list: ['Vaults', 'Markets', 'Trading Bot', 'API'],
+    list: ['Vaults', 'Data', 'Trading Bot', 'API'],
   },
-  {
+
+  {/*{
     category: 'Legal',
     list: ['Privacy Policy', 'Terms & Conditions', 'Disclaimer'],
-  },
+  }*/},
 ];
