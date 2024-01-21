@@ -8,7 +8,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 export default function page() {
   return (
     <>
-    <GoogleAnalytics gaId="G-XYZ" />
+    <GoogleAnalytics gaId="G-7E13GM6QB3" />
       <Hero />
       <Products />
       <Steps />
