@@ -30,7 +30,7 @@ const header = [
   },
   {
     path: 'https://github.com/arcana-markets',
-    name: 'Docs',
+    name: 'Code',
     external: true, // flag to indicate this is an external link
   },
 ];

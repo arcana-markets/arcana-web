@@ -3,8 +3,6 @@ import Wrapper from '../shared/Wrapper';
 import Image from 'next/image';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import Banner from './Banner';
-import Link from 'next/link';
-
 
 export default function Products() {
   return (

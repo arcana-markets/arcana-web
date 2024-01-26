@@ -18,8 +18,18 @@ export default function Footer() {
                  >
                   <FaTwitter className='text-white w-[20px] h-[20px]' />
               </Link>
+              <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
               <FaFacebookF className='text-white w-[20px] h-[20px]' />
+              </Link>
+              <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
               <FaLinkedin className='text-white w-[20px] h-[20px]' />
+              </Link>
             </div>
           </div>
           <div className='flex flex-col sm:flex-row justify-between gap-[1rem]'>
@@ -66,8 +76,9 @@ const footer = [
 
   {
     category: 'Products',
-    list: ['Vaults', 'Data', 'Trading Bot', 'API'],
+    list: ['Data', 'Trading Bot'],
   },
+  
 
   {/*{
     category: 'Legal',
