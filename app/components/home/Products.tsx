@@ -39,16 +39,16 @@ export default function Products() {
                 Token Vaults
               </h2>
               <p className='text-[14px] font-[500] leading-[26px] text-white opacity-70'>
-                Lorem ipsum dolor sit amet consectetur. In magnis viverra nec
-                mauris tempus feugiat platea et porttitor. In ultrices sem nulla
-                massa. Mauris aliquet dis sit pulvinar proin facilisi.
+              Currently in development, our Token Vaults will empower 
+              users to securely deposit funds and earn yield in a dynamic
+              optimized environment. Stay tuned for the future of DeFi earning!
               </p>
               <button 
               className='flex items-center gap-[1rem] mt-[1rem] opacity-50 cursor-not-allowed'
               disabled // This attribute disables the button
             >
               <p className='text-[16px] font-[500] text-[#5099CC]'>
-                Explore Vaults
+                Coming soon
               </p>
               <FaArrowRightLong className='text-[#5099CC]' />
             </button>
@@ -81,9 +81,9 @@ export default function Products() {
                   Data Analytics
                 </h2>
                 <p className='text-[14px] font-[500] leading-[26px] text-white opacity-70'>
-                  Lorem ipsum dolor sit amet consectetur. In magnis viverra nec
-                  mauris tempus feugiat platea et porttitor. In ultrices sem
-                  nulla massa. Mauris aliquet dis sit pulvinar proin facilisi.
+                Explore the pulse of Solana's DeFi landscape with our DEX Data 
+                Analytics. Dive into comprehensive real-time on-chain data; track 
+                market trends, and stay ahead of the curve.
                 </p>
                 <button className='flex hover:opacity-80 active:translate-y-[2px] z-10 items-center gap-[1rem] mt-[1rem]'>
                   <p className='text-[16px] font-[500] text-white'>
@@ -104,9 +104,9 @@ export default function Products() {
                   Trading Bot
                 </h2>
                 <p className='text-[14px] font-[500] leading-[26px] text-white opacity-70'>
-                  Lorem ipsum dolor sit amet consectetur. In magnis viverra nec
-                  mauris tempus feugiat platea et porttitor. In ultrices sem
-                  nulla massa. Mauris aliquet dis sit pulvinar proin.
+                  Unleash the power of automated trading with the Arcana Trading Bot.
+                  Download and run the code locally to transform your trading strategy
+                  or build innovative solutions on top of our robust platform.
                 </p>
                 <button className='mt-[1rem] hover:opacity-80 active:translate-y-[2px] w-fit py-[10px] px-[14px] rounded-[12px] bg-[#5099CC14] text-[#5099CC]'>
                 <a 
