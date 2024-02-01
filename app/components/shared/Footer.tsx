@@ -1,8 +1,8 @@
 import React from 'react';
 import Wrapper from './Wrapper';
 import Image from 'next/image';
-import { FaTwitter, FaFacebookF, FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
+import * as Icons from '../../svg/Icons';
 
 export default function Footer() {
   return (
@@ -16,45 +16,45 @@ export default function Footer() {
                  target="_blank" 
                  rel="noopener noreferrer"
                  >
-                  <FaTwitter className='text-white w-[20px] h-[20px]' />
+              <Icons.xSocialIcon className='text-white w-[20px] h-[20px]' />
               </Link>
-              <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              <Link href="https://github.com/arcana-markets"
               target="_blank"
               rel="noopener noreferrer"
               >
-              <FaFacebookF className='text-white w-[20px] h-[20px]' />
+              <Icons.githubIcon className='text-white' />
               </Link>
-              <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              <Link href="https://discord.gg/7BGB2mZvYW"
               target="_blank"
               rel="noopener noreferrer"
               >
-              <FaLinkedin className='text-white w-[20px] h-[20px]' />
+              <Icons.discordIcon className='text-white' />
               </Link>
             </div>
           </div>
           <div className='flex flex-col sm:flex-row justify-between gap-[1rem]'>
-            {footer.map((item, index) => {
-              return (
-                <div key={index} className=''>
-                  <h3 className='text-[16px] font-[500] leading-[28px] text-white mb-[1rem] opacity-50'>
-                    {item.category}
-                  </h3>
-                  <div className='flex flex-col gap-[8px]'>
-                    {item.list?.map((ls, index) => {
-                      return (
-                        <Link
-                          key={index}
-                          href='/'
-                          className='text-[16px] font-[500] leading-[28px] text-white hover:opacity-80'
-                        >
-                          {ls}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
+          {footer.map((item, index) => {
+          return (
+            <div key={index}>
+              <h3 className='text-[16px] font-[500] leading-[28px] text-white mb-[1rem] opacity-50'>
+                {item.category}
+              </h3>
+              <div className='flex flex-col gap-[8px]'>
+                {item.list?.map((ls, idx) => {
+                  return (
+                    <Link
+                      key={idx}
+                      href={ls.path} // Use the path from your list item here
+                      className='text-[16px] font-[500] leading-[28px] text-white hover:opacity-80'
+                    >
+                      {ls.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
           </div>
         </div>
         <div className='flex flex-col gap-[1rem]'>
@@ -69,19 +69,11 @@ export default function Footer() {
 }
 
 const footer = [
-  {/*{
-    category: 'Company',
-    list: ['About us', 'Blog', 'Media Kit', 'Careers'],
-  },*/},
-
   {
     category: 'Products',
-    list: ['Data', 'Trading Bot'],
+    list: [
+      { name: 'Data', path: '/data' }, // Update the path as needed
+      { name: 'Trading Bot', path: 'https://github.com/arcana-markets' }, // Update the path as needed
+    ],
   },
-  
-
-  {/*{
-    category: 'Legal',
-    list: ['Privacy Policy', 'Terms & Conditions', 'Disclaimer'],
-  }*/},
 ];
