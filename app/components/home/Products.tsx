@@ -41,15 +41,17 @@ export default function Products() {
               users to securely deposit funds and earn yield in a dynamic
               optimized environment. Stay tuned for the future of DeFi earning!
               </p>
-              <button 
-              className='flex items-center gap-[1rem] mt-[1rem] opacity-50 cursor-not-allowed'
-              disabled // This attribute disables the button
-            >
-              <p className='text-[16px] font-[500] text-[#5099CC]'>
-                Coming soon
-              </p>
-              <FaArrowRightLong className='text-[#5099CC]' />
-            </button>
+              <button className='flex hover:opacity-80 active:translate-y-[2px] z-10 items-center gap-[1rem] mt-[1rem]'>
+                  <p className='text-[16px] font-[500] text-[#5099CC]'>
+                  <a 
+                  href="https://app.arcana.markets" 
+                  rel="noopener noreferrer"
+                >
+                    See Markets
+                    </a>
+                  </p>
+                  <FaArrowRightLong className='text-[#5099CC]' />
+                </button>
             </div>
             {/* image ---------->  */}
             <div className='absolute lg:block hidden h-full right-0'>
@@ -108,7 +110,7 @@ export default function Products() {
                 </p>
                 <button className='mt-[1rem] hover:opacity-80 active:translate-y-[2px] w-fit py-[10px] px-[14px] rounded-[12px] bg-[#5099CC14] text-[#5099CC]'>
                 <a 
-                  href="https://github.com/arcana-markets" 
+                  href="https://github.com/arcana-markets/arcana-trading-bot" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >

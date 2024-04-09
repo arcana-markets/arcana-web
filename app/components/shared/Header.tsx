@@ -10,23 +10,24 @@ import Link from 'next/link';
 
 const header = [
   {
-    path: '', // Empty path for disabled item
+    path: 'https://app.arcana.markets', // Empty path for disabled item
     name: 'Vaults',
-    disabled: true, // flag for disabled item
+    external: true, // flag to indicate this is an external link
   },
   {
     path: 'https://app.arcana.markets/data',
     name: 'Data',
     external: true, // flag to indicate this is an external link
+
   },
   {
     path: '/',
     name: '/images/logo.svg',
   },
   {
-    path: '', // Empty path for disabled item
+    path: 'https://github.com/arcana-markets/arcana-trading-bot', // Empty path for disabled item
     name: 'Tools',
-    disabled: true, // flag for disabled item
+    external: true, // flag to indicate this is an external link
   },
   {
     path: 'https://github.com/arcana-markets',
